@@ -1,6 +1,6 @@
 # SSV Module
 
-This document contains the specification of the `ssv` module.
+This document contains the specification of the [`ssv`](https://github.com/bloxapp/ssv-spec/) module.
 
 ## Table of Contents
 
@@ -340,13 +340,15 @@ flowchart LR
         signature-->send
 ```
 
-> **Warning**
-> Below topics are WIP
-
 ## Validator
+
+The `Validator` entity represents a share of a validator that participates in the Ethereum Beacon chain consensus. Note that it's not the validator itself, but actually a virtual representation of a validator that the real operator entity will use.
+
+The operator will use this structure to execute validator related duties, managed by a [DutyRunners](#duty-runners).
 
 ### Duty runners
 
+`DutyRunners` is a map: Beacon roles (as proposer, attester, etc) &rarr; [Runner](#runner). Each duty type has its unique runner.
 
 
 ## Additional documents
