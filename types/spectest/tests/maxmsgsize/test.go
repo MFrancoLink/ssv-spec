@@ -75,6 +75,7 @@ func (t *StructureSizeTest) UnmarshalJSON(data []byte) error {
 		&types.SignedSSVMessage{},
 		&types.ValidatorConsensusData{},
 		&types.BeaconVote{},
+		&types.AggregatorConsensusData{},
 	}
 
 	for _, obj := range possibleObjects {
